@@ -116,7 +116,7 @@
 
 Conceptual Report
 
-Part � 1
+Part 1
 Q-01
 
 By default, in JAX-RS, resource objects are created per request. This implies that, for each request received, a fresh object from the resource class will be created.
@@ -151,7 +151,7 @@ Example from my design:
 /sensors 
 Benefits:
 1. Self-discoverable API 
-Clients don�t need hardcoded URLs 
+Clients don't need hardcoded URLs 
 2. Loose coupling 
 Backend structure can evolve without breaking clients 
 3. Improved developer experience 
@@ -162,7 +162,7 @@ Compared to static documentation, HATEOAS:
 * Reduces dependency on external docs 
 * Makes APIs more adaptive and robust 
 
-Part � 2
+Part 2
 
 Q-1
 
@@ -179,10 +179,10 @@ I choose to return full room objects since:
 * Increases customer efficiency
 * Minimizes back-and-forth movement
 * Ideal for datasets of medium sizes (uses an in-memory database)
-It�s all about balancing efficiency and completeness, but mine favors efficiency.
+It's all about balancing efficiency and completeness, but mine favors efficiency.
 
 Q-2
-Yes � the DELETE operation in my API is idempotent.
+Yes- the DELETE operation in my API is idempotent.
 Explanation:
 If a client sends:
 DELETE /rooms/{id}
@@ -197,7 +197,7 @@ After the first deletion:
 * The room is already removed 
 * Further DELETE requests do not change anything 
 
-Part � 3
+Part-3
 Q-1
 
 In my API, I used:
@@ -236,7 +236,7 @@ Path-based filtering is:
 * Harder to extend
 
 
-Part � 4
+Part-4
 
 Q-1
 I implemented sub-resource pattern:
@@ -250,12 +250,12 @@ Smaller, focused classes
 3. Scalability 
 Easy to extend nested resources 
 4. Cleaner architecture 
-Avoids �god class� with too many responsibilities 
+Avoids god class with too many responsibilities 
 Without this pattern:
 * One large controller becomes hard to manage
 
 
-Part � 5
+Part - 5
 Q-1
 
 When creating a sensor with a non-existent room:
